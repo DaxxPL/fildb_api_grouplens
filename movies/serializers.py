@@ -3,7 +3,6 @@ from .models import Movie, Tag, User, Rating, Genre, Link
 
 
 class DetailLinkSerializer(serializers.ModelSerializer):
-    movie = serializers.StringRelatedField(many=False, read_only=False)
 
     class Meta:
         model = Link
@@ -34,7 +33,6 @@ class NestedMovieSerializer(serializers.ModelSerializer):
 
 
 class DetailGenreSerializer(serializers.ModelSerializer):
-    movies = serializers.StringRelatedField(many=True, read_only=False)
 
     class Meta:
         model = Genre
@@ -58,7 +56,6 @@ class CreateGenreSerializer(serializers.ModelSerializer):
 
 
 class DetailRatingSerializer(serializers.ModelSerializer):
-    movie = serializers.StringRelatedField(many=False)
 
     class Meta:
         model = Rating
