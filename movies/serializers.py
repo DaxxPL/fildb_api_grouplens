@@ -34,7 +34,7 @@ class NestedMovieSerializer(serializers.ModelSerializer):
 
 
 class DetailGenreSerializer(serializers.ModelSerializer):
-    movies = NestedMovieSerializer(many=True)
+    movies = serializers.StringRelatedField(many=True, read_only=False)
 
     class Meta:
         model = Genre
@@ -81,16 +81,8 @@ class CreateRatingSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class NestedLinkSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Link
-        fields = ('imdb', )
-
-
 class DetailMovieSerializer(serializers.ModelSerializer):
-
-    link = NestedLinkSerializer(many=False)
+    link = serializers.SlugRelatedField(many=False, read_only=True, slug_field='imdb')
     score = serializers.SerializerMethodField()
 
     def get_score(self, obj):
@@ -98,7 +90,7 @@ class DetailMovieSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Movie
-        fields = ['title', 'score', 'genres', 'tag', 'link', 'year']
+        fields = ['title', 'score', 'genres', 'link', 'year']
 
 
 class ListMovieSerializer(serializers.ModelSerializer):
@@ -170,8 +162,8 @@ class NestedRatingSerializer(serializers.ModelSerializer):
 
 
 class DetailUserSerializer(serializers.ModelSerializer):
-    tag = NestedTagSerializer(many=True)
-    ratings = NestedRatingSerializer(many=True)
+    tag = serializers.StringRelatedField(many=True, read_only=True)
+    ratings = serializers.StringRelatedField(many=True, read_only=True)
 
     class Meta:
         model = User
