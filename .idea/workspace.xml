@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="77d95bf9-966d-4af2-b64d-276176a6e750" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fimdb_api_grouplens/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fimdb_api_grouplens/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,11 +45,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="128" column="49" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -95,8 +103,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2412" />
-    <option name="y" value="10" />
+    <option name="x" value="1963" />
+    <option name="y" value="-43" />
     <option name="width" value="2087" />
     <option name="height" value="1027" />
   </component>
@@ -254,12 +262,12 @@
       <workItem from="1561128339488" duration="9072000" />
       <workItem from="1561196704342" duration="7553000" />
       <workItem from="1561284404361" duration="5252000" />
-      <workItem from="1561361434626" duration="4301000" />
+      <workItem from="1561361434626" duration="4722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127444000" />
+    <option name="totallyTimeSpent" value="127865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2412" y="10" width="2087" height="1027" extended-state="0" />
@@ -493,13 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/movies/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
@@ -534,6 +535,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="128" column="49" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
         </state>
       </provider>
     </entry>
