@@ -1,1 +1,1 @@
-web: gunicorn filmdb_api_grouplens.wsgi --log-file -
+web: gunicorn fimdb_api_grouplens.wsgi --log-file -
