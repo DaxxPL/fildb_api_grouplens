@@ -62,8 +62,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="473">
-                  <caret line="151" column="40" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
+                <state relative-caret-position="443">
+                  <caret line="152" selection-start-line="152" selection-end-line="152" />
                   <folding>
                     <element signature="e#320#329#0" expanded="true" />
                   </folding>
@@ -108,7 +108,7 @@
             <entry file="file://$PROJECT_DIR$/movies/serializers.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="75">
-                  <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+                  <caret line="5" selection-start-line="5" selection-end-line="5" />
                   <folding>
                     <element signature="e#0#38#0" expanded="true" />
                   </folding>
@@ -373,12 +373,12 @@
       <workItem from="1561196704342" duration="7553000" />
       <workItem from="1561284404361" duration="5252000" />
       <workItem from="1561361434626" duration="7047000" />
-      <workItem from="1561370700792" duration="3493000" />
+      <workItem from="1561370700792" duration="3802000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133683000" />
+    <option name="totallyTimeSpent" value="133992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1963" y="-43" width="2436" height="1027" extended-state="0" />
@@ -636,7 +636,7 @@
     <entry file="file://$PROJECT_DIR$/movies/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -645,8 +645,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="151" column="40" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
+        <state relative-caret-position="443">
+          <caret line="152" selection-start-line="152" selection-end-line="152" />
           <folding>
             <element signature="e#320#329#0" expanded="true" />
           </folding>
