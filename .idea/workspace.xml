@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77d95bf9-966d-4af2-b64d-276176a6e750" name="Default Changelist" comment="" />
+    <list default="true" id="77d95bf9-966d-4af2-b64d-276176a6e750" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fimdb_api_grouplens/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fimdb_api_grouplens/settings.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +45,17 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="128" column="49" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -73,11 +86,11 @@
         <option value="$PROJECT_DIR$/movies/serializers.py" />
         <option value="$PROJECT_DIR$/movies/models.py" />
         <option value="$PROJECT_DIR$/movies/admin.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/requrements.txt" />
         <option value="$PROJECT_DIR$/runtime.txt" />
-        <option value="$PROJECT_DIR$/fimdb_api_grouplens/settings.py" />
         <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/fimdb_api_grouplens/settings.py" />
       </list>
     </option>
   </component>
@@ -105,6 +118,12 @@
               <item name="fimdb_api_grouplens" type="b2602c69:ProjectViewProjectNode" />
               <item name="fimdb_api_grouplens" type="462c0819:PsiDirectoryNode" />
               <item name="fimdb_api_grouplens" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fimdb_api_grouplens" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fimdb_api_grouplens" type="462c0819:PsiDirectoryNode" />
+              <item name="fimdb_api_grouplens" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -235,12 +254,12 @@
       <workItem from="1561128339488" duration="9072000" />
       <workItem from="1561196704342" duration="7553000" />
       <workItem from="1561284404361" duration="5252000" />
-      <workItem from="1561361434626" duration="3416000" />
+      <workItem from="1561361434626" duration="4301000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126559000" />
+    <option name="totallyTimeSpent" value="127444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2412" y="10" width="2087" height="1027" extended-state="0" />
@@ -266,7 +285,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.116292134" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.11589242" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,9 +376,6 @@
           </filtering>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clear_db.sh">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/movies_movie">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -460,13 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/movies/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -491,13 +500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/movies/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
@@ -515,6 +517,23 @@
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clear_db.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="128" column="49" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
         </state>
       </provider>
     </entry>
