@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="77d95bf9-966d-4af2-b64d-276176a6e750" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/dump.rdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fimdb_api_grouplens/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fimdb_api_grouplens/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fimdb_api_grouplens/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/fimdb_api_grouplens/celery.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fimdb_api_grouplens/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fimdb_api_grouplens/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/movies/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,14 +63,96 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/movies/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="160" selection-start-line="160" selection-end-line="160" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/celery.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#31#69#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="50" column="44" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
+              <folding>
+                <element signature="e#320#329#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/django_celery_beat_periodictasks">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
+              <filtering>
+                <filter text="" />
+              </filtering>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/django_celery_results_taskresult">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
+              <filtering>
+                <filter text="" />
+              </filtering>
+              <column-attributes>
+                <column name="task_id" position="5" />
+                <column name="content_type" position="7" />
+                <column name="content_encoding" position="8" />
+                <column name="result" position="4" />
+                <column name="date_done" position="2" />
+                <column name="hidden" position="9" />
+                <column name="meta" position="10" />
+                <column name="task_args" position="11" />
+                <column name="task_kwargs" position="12" />
+                <column name="task_name" position="13" />
+                <column name="traceback" position="6" />
+              </column-attributes>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/django_celery_beat_periodictask">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
+              <filtering>
+                <filter text="" />
+              </filtering>
             </state>
           </provider>
         </entry>
@@ -104,13 +190,13 @@
         <option value="$PROJECT_DIR$/runtime.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/movies/serializers.py" />
-        <option value="$PROJECT_DIR$/fimdb_api_grouplens/__init__.py" />
         <option value="$PROJECT_DIR$/movies/urls.py" />
         <option value="$PROJECT_DIR$/movies/tasks.py" />
         <option value="$PROJECT_DIR$/movies/views.py" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/fimdb_api_grouplens/celery.py" />
+        <option value="$PROJECT_DIR$/fimdb_api_grouplens/__init__.py" />
         <option value="$PROJECT_DIR$/fimdb_api_grouplens/settings.py" />
       </list>
     </option>
@@ -118,7 +204,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="1915" />
     <option name="y" value="-106" />
-    <option name="width" value="2344" />
+    <option name="width" value="1217" />
     <option name="height" value="1133" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -271,9 +357,9 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Django server.fimdb_api_grouplens" />
       <item itemvalue="Python.tests" />
       <item itemvalue="Python.views" />
-      <item itemvalue="Django server.fimdb_api_grouplens" />
     </list>
     <recent_temporary>
       <list>
@@ -308,17 +394,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161422000" />
+    <option name="totallyTimeSpent" value="165631000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1915" y="-106" width="2344" height="1133" extended-state="0" />
+    <frame x="1915" y="-106" width="1217" height="1133" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1702867" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14212766" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.63857514" weight="0.3246878" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.63857514" visible="true" weight="0.3246878" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -326,15 +412,15 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" sideWeight="0.4995656" weight="0.32949087" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50477844" side_tool="true" visible="true" weight="0.37944284" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49522156" visible="true" weight="0.37944284" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.4992451" weight="0.31508166" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5055319" side_tool="true" weight="0.37944284" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4944681" weight="0.37944284" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49869677" weight="0.31508166" />
       <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.4995656" weight="0.32853025" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.09556907" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.18723404" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08730159" />
@@ -575,99 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/movies/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1696">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#320#329#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/movies/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="171" selection-start-line="171" selection-end-line="171" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/django_celery_results_taskresult">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
-          <filtering>
-            <filter text="" />
-          </filtering>
-          <column-attributes>
-            <column name="task_id" position="3" />
-            <column name="status" position="5" />
-            <column name="content_type" position="7" />
-            <column name="content_encoding" position="8" />
-            <column name="result" position="4" />
-            <column name="date_done" position="2" />
-            <column name="hidden" position="9" />
-            <column name="meta" position="10" />
-            <column name="task_args" position="11" />
-            <column name="task_kwargs" position="12" />
-            <column name="task_name" position="13" />
-            <column name="traceback" position="6" />
-          </column-attributes>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/movies_movie">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/movies_link">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
@@ -683,13 +676,128 @@
     <entry file="file://$PROJECT_DIR$/movies/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/movies_movie">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movies/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movies/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="160" selection-start-line="160" selection-end-line="160" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/celery.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#31#69#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/django_celery_beat_periodictask">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/django_celery_beat_solarschedule">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="50" column="44" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
+          <folding>
+            <element signature="e#320#329#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/django_celery_beat_periodictasks">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/django_celery_results_taskresult">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
+          <filtering>
+            <filter text="" />
+          </filtering>
+          <column-attributes>
+            <column name="task_id" position="5" />
+            <column name="content_type" position="7" />
+            <column name="content_encoding" position="8" />
+            <column name="result" position="4" />
+            <column name="date_done" position="2" />
+            <column name="hidden" position="9" />
+            <column name="meta" position="10" />
+            <column name="task_args" position="11" />
+            <column name="task_kwargs" position="12" />
+            <column name="task_name" position="13" />
+            <column name="traceback" position="6" />
+          </column-attributes>
         </state>
       </provider>
     </entry>

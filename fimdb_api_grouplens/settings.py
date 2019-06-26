@@ -44,9 +44,16 @@ INSTALLED_APPS = [
     'movies',
     'django_filters',
     'rest_framework_swagger',
-    'djcelery',
+    'django_celery_beat',
     'django_celery_results'
 ]
+
+CELERY_BROKER_URL = os.environ['REDIS_URL']
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_CACHE_BACKEND = 'django-cache'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -152,11 +159,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-
-
-CELERY_BROKER_URL = 'REDIS_URL_HERE'
-CELERY_RESULT_BACKEND = 'REDIS_URL_HERE'
-
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
-CELERY_ACCEPT_CONTENT = ['json']
