@@ -4,7 +4,8 @@ import os
 from celery import Celery
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'fimdb_api_grouplens.settings')
 app = Celery('fimdb_api_grouplens')
-app.config_from_object('django.conf:settings', namespace='CELERY')
+app.conf.update(BROKER_URL=os.environ['REDIS_URL'],
+                CELERY_RESULT_BACKEND=os.environ['REDIS_URL'])
 app.autodiscover_tasks()
-app.conf.timezone = 'Europe/London'
+CELERY_TIMEZONE = 'Europe/London'
 app.Task.track_started
