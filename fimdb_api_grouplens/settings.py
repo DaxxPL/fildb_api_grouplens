@@ -12,6 +12,13 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import dj_database_url
+import djcelery
+
+CELERY_BROKER_URL = 'redis://localhost'
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_CACHE_BACKEND = 'django-cache'
+
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -43,7 +50,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'movies',
     'django_filters',
-    'rest_framework_swagger'
+    'rest_framework_swagger',
+    'djcelery',
+    'django_celery_results'
 ]
 
 MIDDLEWARE = [
@@ -137,9 +146,9 @@ FILES_TO_IMPORT = {
     'links': 'links.csv',
 }
 
-AVAILABLE_SOURCES = {
+AVAILABLE_SOURCES = [
     'ml-latest-small'
-}
+]
 
 
 REST_FRAMEWORK = {

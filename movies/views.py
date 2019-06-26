@@ -7,20 +7,13 @@ from .serializers import ListMovieSerializer, DetailMovieSerializer, ListTagSeri
     ListLinkSerializer, DetailLinkSerializer, CreateUserSerializer, CreateMovieSerializer, CreateTagSerializer, \
     CreateRatingSerializer, CreateGenreSerializer, CreateLinkSerializer, DetailUserSerializer
 from rest_framework.views import APIView
-from urllib.error import URLError
-import zipfile
-from io import BytesIO
-import csv
-import re
-import datetime
-import pytz
 import django_filters
 from django.db import models
-import codecs
-import requests
+from .tasks import parse_from_url_to_db
+from fimdb_api_grouplens.celery import app
+from django_celery_results.models import TaskResult
 
 YEAR_PATTERN = r"\(\d{4}\)\s*$"
-LOCKED_FROM_EXTERNAL_API = False
 
 
 class ListMoviesFilter(django_filters.FilterSet):
@@ -153,140 +146,27 @@ class CreateMoviesView(generics.CreateAPIView):
 
 class FetchFromExternalApi(APIView):
 
-    @staticmethod
-    def fetch_from_url(source):
-        return requests.get('http://files.grouplens.org/datasets/movielens/%s.zip' % source, stream=True)
-
     def post(self, request):
-        global LOCKED_FROM_EXTERNAL_API, YEAR_PATTERN
-        if LOCKED_FROM_EXTERNAL_API is False:
-            LOCKED_FROM_EXTERNAL_API = True
-            try:
-                source = request.data['source']
-            except KeyError:
-                LOCKED_FROM_EXTERNAL_API = False
-                return Response('no source data in body',
-                                status=status.HTTP_400_BAD_REQUEST)
-            if source in settings.AVAILABLE_SOURCES:
-                try:
-                    response = self.fetch_from_url(request.data['source'])
-                except URLError:
-                    LOCKED_FROM_EXTERNAL_API = False
-                    return Response("External server respond time out",
-                                    status=status.HTTP_504_GATEWAY_TIMEOUT)
-                try:
-                    zip_file = zipfile.ZipFile(BytesIO(response.content), allowZip64=True)
-                except (zipfile.BadZipFile, TypeError, AttributeError):
-                    LOCKED_FROM_EXTERNAL_API = False
-                    return Response("External server provided wrong file",
-                                    status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-                try:
-                    file = csv.reader(codecs.iterdecode(zip_file.open(source + '/' +
-                                                                      settings.FILES_TO_IMPORT['movies']), 'utf-8'))
-                except (csv.Error, KeyError):
-                    LOCKED_FROM_EXTERNAL_API = False
-                    return Response("Failed to read CSV file",
-                                    status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-                for line in file:
-                    if file.line_num != 1:
-                        movie = Movie()
-                        movie.id = int(line[0])
-                        try:
-                            movie.year = re.findall(YEAR_PATTERN, line[1])[0].strip()[1:-1]
-                        except IndexError:
-                            pass
-                        movie.title = re.sub(YEAR_PATTERN, '', line[1]).strip()
-                        movie.save()
-                        for item in line[2].split('|'):
-                            genre = Genre.objects.get_or_create(name=item)[0]
-                            movie.genres.add(genre)
-                        movie.save()
-                    elif line != ['movieId', 'title', 'genres']:
-                        LOCKED_FROM_EXTERNAL_API = False
-                        return Response('File contains wrong headers!', status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-                    else:
-                        Movie.objects.all().delete()
-                try:
-                    file = csv.reader(codecs.iterdecode(zip_file.open(source + '/' +
-                                                                      settings.FILES_TO_IMPORT['ratings']), 'utf-8'))
-                except csv.Error:
-                    LOCKED_FROM_EXTERNAL_API = False
-                    return Response("Failed to read CSV file",
-                                    status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-                for line in file:
-                    if file.line_num != 1:
-                        rating = Rating()
-                        user = User.objects.get_or_create(id=line[0])[0]
-                        rating.user = user
-                        try:
-                            rating.movie = Movie.objects.get(id=line[1])
-                        except Movie.DoesNotExist:
-                            continue
-                        rating.score = float(line[2])
-                        rating.date = datetime.datetime.fromtimestamp(int(line[3]), tz=pytz.UTC)
-                        rating.save()
-                    elif line != ['userId', 'movieId', 'rating', 'timestamp']:
-                        LOCKED_FROM_EXTERNAL_API = False
-                        return Response('File contains wrong headers!', status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-                    else:
-                        Rating.objects.all().delete()
-                try:
-                    file = csv.reader(codecs.iterdecode(zip_file.open(source + '/' +
-                                                                      settings.FILES_TO_IMPORT['tags']), 'utf-8'))
-                except csv.Error:
-                    LOCKED_FROM_EXTERNAL_API = False
-                    return Response("Failed to read CSV file",
-                                    status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-                for line in file:
-                    if file.line_num != 1:
-                        tag = Tag.objects.get_or_create(name=line[2].lower().strip())[0]
-                        timetag = TimeTag()
-                        timetag.tag = tag
-                        user = User.objects.get_or_create(id=line[0])[0]
-                        tag.users.add(user)
-                        timetag.user = user
-                        try:
-                            tag.movies.add(Movie.objects.get(id=line[1]))
-                            timetag.movie = Movie.objects.get(id=line[1])
-                        except Movie.DoesNotExist:
-                            continue
-                        timetag.date = datetime.datetime.fromtimestamp(int(line[3]), tz=pytz.UTC)
-                        tag.save()
-                        timetag.save()
-                    elif line != ['userId', 'movieId', 'tag', 'timestamp']:
-                        LOCKED_FROM_EXTERNAL_API = False
-                        return Response('File contains wrong headers!', status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-                    else:
-                        Tag.objects.all().delete()
-                        TimeTag.objects.all().delete()
-                try:
-                    file = csv.reader(codecs.iterdecode(zip_file.open(source + '/' +
-                                                                      settings.FILES_TO_IMPORT['links']), 'utf-8'))
-                except csv.Error:
-                    LOCKED_FROM_EXTERNAL_API = False
-                    return Response("Failed to read CSV file",
-                                    status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-                for line in file:
-                    if file.line_num != 1:
-                        link = Link()
-                        try:
-                            link.movie = Movie.objects.get(id=line[0])
-                        except Movie.DoesNotExist:
-                            continue
-                        link.movie_lens = 'https://movielens.org/movies/%s' % line[0]
-                        link.imdb = 'https://imdb.com/title/tt%s' % line[1]
-                        link.tmdb = 'https://www.themoviedb.org/movie/%s' % line[2]
-                        link.save()
-                    elif line != ['movieId', 'imdbId', 'tmdbId']:
-                        LOCKED_FROM_EXTERNAL_API = False
-                        return Response('File contains wrong headers!', status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-                    else:
-                        Link.objects.all().delete()
-                LOCKED_FROM_EXTERNAL_API = False
-                return Response("Success!")
-            else:
-                LOCKED_FROM_EXTERNAL_API = False
-                return Response('This source is not available', status=status.HTTP_404_NOT_FOUND)
-        else:
-            return Response("Another POST /db executing. Statement locked!",
-                            status=status.HTTP_429_TOO_MANY_REQUESTS)
+        try:
+            source = request.data['source']
+        except KeyError:
+            return Response('no source data in body',
+                            status=status.HTTP_400_BAD_REQUEST)
+        if len(list(filter(lambda x: x == parse_from_url_to_db.__name__,
+                           [i['name'] for i in app.control.inspect().active()['celery@MBP-Mikolaj']]))) >= 1:
+            return Response('another /db/[post] executing now', status=status.HTTP_429_TOO_MANY_REQUESTS)
+        parse_from_url_to_db.delay(source)
+        return Response('request initalized, to chceck status of request sent get for this url',
+                        status=status.HTTP_202_ACCEPTED)
+
+    def get(self, request):
+        try:
+            result = TaskResult.objects.get(status='STARTED')
+        except TaskResult.DoesNotExist:
+            result = TaskResult.objects.order_by('-date_done').first()
+        return Response({
+            'status': result.status,
+            'info': result.result,
+            'started': result.date_done
+        }, status=status.HTTP_200_OK)
+
