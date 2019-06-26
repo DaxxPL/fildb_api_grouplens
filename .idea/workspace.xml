@@ -362,9 +362,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Django server.fimdb_api_grouplens" />
       <item itemvalue="Python.tests" />
       <item itemvalue="Python.views" />
+      <item itemvalue="Django server.fimdb_api_grouplens" />
     </list>
     <recent_temporary>
       <list>
