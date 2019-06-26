@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77d95bf9-966d-4af2-b64d-276176a6e750" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/dump.rdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fimdb_api_grouplens/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/fimdb_api_grouplens/celery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/movies/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,37 +58,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/movies/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="619">
+              <caret line="154" column="61" lean-forward="true" selection-start-line="154" selection-start-column="61" selection-end-line="154" selection-end-column="61" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/django_celery_results_taskresult">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
-              <filtering>
-                <filter text="" />
-              </filtering>
-              <column-attributes>
-                <column name="task_id" position="5" />
-                <column name="content_type" position="7" />
-                <column name="content_encoding" position="8" />
-                <column name="result" position="4" />
-                <column name="date_done" position="2" />
-                <column name="hidden" position="9" />
-                <column name="meta" position="10" />
-                <column name="task_args" position="11" />
-                <column name="task_kwargs" position="12" />
-                <column name="task_name" position="13" />
-                <column name="traceback" position="6" />
-              </column-attributes>
+        <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
+              <folding>
+                <element signature="e#320#329#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/django_celery_beat_periodictask">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
-              <filtering>
-                <filter text="" />
-              </filtering>
+        <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/celery.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+              <folding>
+                <element signature="e#31#69#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,12 +129,12 @@
         <option value="$PROJECT_DIR$/movies/serializers.py" />
         <option value="$PROJECT_DIR$/movies/urls.py" />
         <option value="$PROJECT_DIR$/movies/tasks.py" />
-        <option value="$PROJECT_DIR$/movies/views.py" />
         <option value="$PROJECT_DIR$/fimdb_api_grouplens/__init__.py" />
         <option value="$PROJECT_DIR$/fimdb_api_grouplens/settings.py" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/fimdb_api_grouplens/celery.py" />
+        <option value="$PROJECT_DIR$/movies/views.py" />
       </list>
     </option>
   </component>
@@ -332,11 +331,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167048000" />
+    <option name="totallyTimeSpent" value="167915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1915" y="-106" width="1815" height="1133" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.094190635" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -634,15 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/django_celery_beat_periodictask">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/django_celery_beat_solarschedule">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
@@ -680,42 +669,12 @@
         <state relative-caret-position="-69" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
-          <folding>
-            <element signature="e#320#329#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/celery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-          <folding>
-            <element signature="e#31#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/movies/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="160" selection-start-line="160" selection-end-line="160" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -739,6 +698,45 @@
             <column name="task_name" position="13" />
             <column name="traceback" position="6" />
           </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://66f29906-85e5-4c3d-a3fd-eb116caf462d/schema/main/table/django_celery_beat_periodictask">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="cd74ac8c-bbd2-42ca-add2-5eb4e398abb7">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/celery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+          <folding>
+            <element signature="e#31#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movies/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="154" column="61" lean-forward="true" selection-start-line="154" selection-start-column="61" selection-end-line="154" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fimdb_api_grouplens/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#320#329#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

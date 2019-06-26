@@ -152,8 +152,9 @@ class FetchFromExternalApi(APIView):
         except KeyError:
             return Response('no source data in body',
                             status=status.HTTP_400_BAD_REQUEST)
+        name = list(app.control.inspect().active().keys())[0]
         if len(list(filter(lambda x: x == parse_from_url_to_db.__name__,
-                           [i['name'] for i in app.control.inspect().active()['celery@MBP-Mikolaj']]))) >= 1:
+                           [i['name'] for i in app.control.inspect().active()[name]]))) >= 1:
             return Response('another /db/[post] executing now', status=status.HTTP_429_TOO_MANY_REQUESTS)
         parse_from_url_to_db.delay(source)
         return Response('request initalized, to chceck status of request sent get for this url',
