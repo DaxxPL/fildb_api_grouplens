@@ -1,2 +1,2 @@
 web: gunicorn fimdb_api_grouplens.wsgi --log-file -
-worker: celery -A fimdb_api_grouplens.celery worker
+worker: celery worker -A fimdb_api_grouplens -E -l debug
